@@ -3,6 +3,10 @@ import { LoginPage } from "./pages/LoginPage"
 import { SignUpPage } from "./pages/SignUpPage"
 import HomePage from "./pages/HomePage"
 import OutletPage from "./pages/OutletPage"
+import ShopPage from "./pages/ShopPage"
+import CreateProductPage from "./pages/Admin/CreateProductPage"
+import CategoriesPage from "./pages/CategoriesPage"
+import AboutPage from "./pages/AboutPage"
 
 const App = () => {
   return (
@@ -12,7 +16,12 @@ const App = () => {
       <Route element={<OutletPage />}>
 
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/shop" element={<ShopPage/>} />
+        <Route path="/categories" element = {<CategoriesPage/>}/>
+
+        {/* Admin Routes */}
+        <Route path="/admin/dashboard" element={<CreateProductPage/>} />
 
       </Route>
 
